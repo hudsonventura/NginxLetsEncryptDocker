@@ -58,7 +58,7 @@ Edit the line 12 of file <b>init-letsencrypt.sh</b> from 'staging=1' to 'staging
 sudo ./init-letsencrypt.sh
 ```
 <br>
-If you get some error on generating process, be right that Nginx congis is ok.<br>
+If you get some error on generating process, be right that Nginx config is ok.<br>
 Turn staging to 1 in init-letsencrypt.sh to tests.<br>
 <br>
 <br>
@@ -73,7 +73,13 @@ Turn staging to 1 in init-letsencrypt.sh to tests.<br>
 You can generate just 5 valids certificate from 168 hours. So, if you have some trouble, set the staging (from init-letsencrypt.sh) to 1 until the tests is not finished.<br>
 Finished it, you can set staging to 0 again.<br>
 <br>
+The lines 13 and 21 from docker-composer.yml are to renew the certificate every 12h.<br>
+<br>
 Maybe you have to set the DNS records <b>A</b> and <b>AAAA</b> in you domain. If you are testing, you can use the https://www.dynu.com/. It's a free DNS that you can set the DNS records.<br>
 <br>
 The files 'init-letsencrypt.sh' and 'data/nginx/app.conf' 
 were caught from Philipp Medium page at https://pentacent.medium.com/nginx-and-lets-encrypt-with-docker-in-less-than-5-minutes-b4b8a60d3a71<br>
+<br>
+Credits to Phillip
+
+https://pentacent.medium.com
