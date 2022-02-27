@@ -39,11 +39,11 @@ You will have to inform some data to generate a new certificate.
 ```bash
 $ sudo docker-compose up
 ```
-At this poin you have a invalid certificate genegated, but you already have SSL able at your connection.<br>
+At this poin you have a invalid certificate genegated, but you already have SSL able on your connection.<br>
 Here you can configure Nginx to your pourpose.<br><br>
 <br>
 <br>
-Are you ready? Can we continue? Ok!
+Are you ready? Can we continue? Your website is working ok? So.... let's go.
 <br>
 <br>
 ## Edit file init-letsencrypt.sh
@@ -64,3 +64,16 @@ Turn staging to 1 in init-letsencrypt.sh to tests.<br>
 <br>
 
 ### The valid certificate maybe have some minutes to be really valid.
+<br>
+<br>
+<br>
+<br>
+
+# Inform
+You can generate just 5 valids certificate from 168 hours. So, if you have some trouble, set the staging (from init-letsencrypt.sh) to 1 until the tests is not finished.<br>
+Finished it, you can set staging to 0 again.<br>
+<br>
+Maybe you have to set the DNS records <b>A</b> and <b>AAAA</b> in you domain. If you are testing, you can use the https://www.dynu.com/. It's a free DNS that you can set the DNS records.<br>
+<br>
+The files 'init-letsencrypt.sh' and 'data/nginx/app.conf' 
+were caught from Philipp Medium page at https://pentacent.medium.com/nginx-and-lets-encrypt-with-docker-in-less-than-5-minutes-b4b8a60d3a71<br>
