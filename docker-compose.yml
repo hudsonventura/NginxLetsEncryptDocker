@@ -22,7 +22,7 @@ services:
 
   site:
     image: site:latest
-    container_name: nginx_site_1
+    container_name: site
     ports:
       - "5000:5000"
 
