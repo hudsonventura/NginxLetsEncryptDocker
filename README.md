@@ -1,9 +1,13 @@
 # NginxLetsEncryptDocker
 This repo will help and automate to able a SSL with Let's Encrypt on container Docker using docker compose.
 <br>
+This repositorie is an environment based on Phillip's post at https://pentacent.medium.com/nginx-and-lets-encrypt-with-docker-in-less-than-5-minutes-b4b8a60d3a71 in 2018/09/28.
+
 Credits to Phillip https://pentacent.medium.com
 
-## Prerequisites
+<br>
+
+## Requirements
 A distro Linux, docker, docker-compose, some knowledg about it and Nginx.
 <br><br>
 
@@ -54,19 +58,25 @@ $ sudo docker-compose up
 ```
 At this poin you have a invalid certificate genegated, but you already have SSL able on your connection.<br>
 Here you can configure Nginx to your pourpose. Make sure all is working right.<br><br>
+
 <br>
 <br>
 Are you ready? Can we continue? Your website is working ok? So.... let's go.
 <br>
 <br>
 ____
+
 ## Now we will generate a valid certificate
 <br>
+The containers must be up to below process.
+<br>
+<br>
+
 ## Edit file init-letsencrypt.sh
 ```bash
 $ nano init-letsencrypt.sh
 ```
-Edit the line 12 of file <b>init-letsencrypt.sh</b> from 'staging=1' to 'staging=0'.
+Edit the line 12  from 'staging=1' to 'staging=0'.
 <br>
 
 ## Try to generate a valid certificate

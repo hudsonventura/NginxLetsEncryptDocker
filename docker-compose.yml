@@ -1,7 +1,7 @@
 version: '3'
 services:
   nginx:
-    image: nginx:1.15-alpine
+    image: nginx:1.15-alpine # if ARM, try arm64v8/nginx
     container_name: nginx
     ports:
       - "80:80"
@@ -15,7 +15,7 @@ services:
       - system-or-website-network
       
   certbot:
-    image: certbot/certbot
+    image: certbot/certbot # if ARM, try certbot/certbot:arm64v8-v1.3.0
     container_name: certbot
     volumes:
       - ./data/certbot/conf:/etc/letsencrypt
