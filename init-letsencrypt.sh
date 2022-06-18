@@ -5,11 +5,11 @@ if ! [ -x "$(command -v docker-compose)" ]; then
   exit 1
 fi
 
-domains=(woodspop.ddnsfree.com)
+domains=(yourdomain.com)
 rsa_key_size=4096
 data_path="./data/certbot"
-email="youremail@domain.com" # Adding a valid address is strongly recommended
-staging=1 # Set to 1 if you're testing your setup to avoid hitting request limits
+email="youremail@yourdomain.com" # Adding a valid address is strongly recommended
+staging=1 # Set to 1 if you're testing your setup to avoid hitting request limits, and 0 to production
 
 if [ -d "$data_path" ]; then
   read -p "Existing data found for $domains. Continue and replace existing certificate? (y/N) " decision
